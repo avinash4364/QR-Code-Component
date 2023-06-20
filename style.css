@@ -4,7 +4,6 @@
 :root {
   --white: hsl(0, 0%, 100%);
   --light-gray: hsl(212, 45%, 89%);
-  --grayish-blue: hsl(220, 15%, 55%);
   --dark-blue: hsl(218, 44%, 22%);
 }
 
@@ -24,10 +23,14 @@ body {
 
 .attribution {
   font-size: 11px;
+  position: absolute;
+  bottom: 20px;
+  transform: translateX(-50%);
+  left: 50%;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--dark-blue);
 }
 
 p {
@@ -36,14 +39,45 @@ p {
 
 .qr-box {
   background-color: var(--white);
-  width: 400px;
-  padding: 10px;
-  border-radius: 11px;
+  width: 320px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.qr-heading {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.qr-text {
+  font-weight: 400;
+  opacity: 0.5;
 }
 
 .qr-box img {
   width: 100%;
+  border-radius: 15px;
+}
+
+@media (max-width: 375px) {
+  .qr-box {
+    width: 250px;
+    padding: 12px;
+  }
+
+  .qr-heading {
+    font-size: 18px;
+  }
+
+  .qr-text {
+    font-size: 12px;
+  }
 }
