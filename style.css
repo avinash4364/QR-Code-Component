@@ -19,6 +19,7 @@
 body {
   font-family: 'Outfit', sans-serif;
   min-height: 100vh;
+  background-color: var(--light-gray);
 }
 
 .attribution {
@@ -31,4 +32,18 @@ body {
 
 p {
   font-size: 15px;
+}
+
+.qr-box {
+  background-color: var(--white);
+  width: 400px;
+  padding: 10px;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.qr-box img {
+  width: 100%;
 }
